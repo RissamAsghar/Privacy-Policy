@@ -79,8 +79,7 @@
   • Optional 1-Tap Google Drive Cloud Backup (drive.appdata):                            
   If you voluntarily choose to use the "Back Up to Google Drive / Restore from Google    
   Drive" feature, the App requests Google Sign-In authentication (accessing your basic   
-  account email/ID for session authentication) and the restricted https://www.googleapis.
-  com/auth/drive.appdata scope.                                                          
+  account email/ID for session authentication) and the restricted https://www.googleapis.com/auth/drive.appdata scope.                                                          
   • How Google Drive Data is Handled:                                                    
   This scope only allows Med Folio to read and write your encrypted backup archive inside
   a hidden, private appDataFolder located within your own personal Google Drive account. 
