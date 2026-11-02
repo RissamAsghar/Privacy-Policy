@@ -1,171 +1,199 @@
- Privacy Policy for Med Folio                                                          
-                                                                                         
-  Effective Date: October 14, 2026                                                       
-  Last Updated: October 28, 2026                                                         
-  Developer: Effitron                                                                    
-  Contact Email: effitron.official@outlook.com                                           
-  ──────                                                                                 
-  ## Overview                                                                            
-                                                                                         
-  Effitron operates the Med Folio mobile application (the "App"). This Privacy Policy    
-  explains how we handle, process, store, and protect information when you use our       
-  educational medical reference directory, package scanner, wellness calculators,        
-  reminders, Pomodoro timer, and study notebook tools.                                   
-                                                                                         
-  We have designed Med Folio with an offline-first, privacy-by-design architecture. We do
-  not operate proprietary external servers that collect, sell, or profile your personal  
-  health or study data.                                                                  
-  ──────                                                                                 
-  ## 1. Information Processed Locally on Your Device                                     
-                                                                                         
-  By default, all user-generated content and calculator inputs remain strictly on your   
-  device inside the App’s private internal storage:                                      
-                                                                                         
-  • Notebook Content (Text, Checklists, Voice Notes, and Images):                        
-  Any study notes, checklists, voice recordings, and attached images (selected via the   
-  Android system Photo Picker) you create in the Notebook are stored locally in the App's
-  private internal storage (filesDir and local SQLite/Room database). We never have      
-  access to your notes, audio files, or images.                                          
-  • Body & Wellness Calculator Inputs:                                                   
-  Metrics entered into the calculators (such as height, weight, age, waist circumference,
-  or heart rate) are calculated instantaneously in device memory to display educational  
-  outputs (BMI, BMR, TDEE, Ideal Body Weight, Hydration, and Heart Rate Zones). These    
-  values are not transmitted off your device.                                            
-  • Bookmarks, Reminders, and Pomodoro Timers:                                           
-  Saved formula/brand bookmarks, offline alarm schedules, and study timer sessions are   
-  stored locally on your device.                                                         
-  ──────                                                                                 
-  ## 2. Device Permissions & How We Use Them                                             
-                                                                                         
-  Med Folio requests specific Android permissions solely when you actively use a         
-  corresponding feature ("just-in-time" access):                                         
-                                                                                         
-  • Camera (android.permission.CAMERA):                                                  
-  Requested only when you open the Smart Medicine Name & Barcode Scanner or capture an   
-  image for a note. Camera frames used for optical text recognition (OCR) and barcode    
-  scanning are processed ephemerally 100% on-device to match package labels against the  
-  local drug directory. No camera video streams or scanned frames are ever uploaded or   
-  transmitted to any server.                                                             
-  • Microphone (android.permission.RECORD_AUDIO):                                        
-  Requested solely when you actively tap the microphone button to use Voice Search or    
-  record a personal Audio Note inside your Notebook. Voice note files are saved          
-  exclusively inside the App’s private local storage on your device. Background          
-  microphone recording is never performed.                                               
-  • Location (ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION):                            
-  Requested only when you actively open the Nearby Clinics & Pharmacies locator tab to   
-  find healthcare facilities around your current area on OpenStreetMap. Your location is 
-  used strictly in real time while the screen is open and is never tracked in the        
-  background, stored, or sold.                                                           
-  • Biometric Authentication (android.permission.USE_BIOMETRIC):                         
-  Used locally via the Android OS BiometricPrompt hardware API to allow you to optionally
-  lock private Notebook entries using your device fingerprint, face unlock, or screen    
-  lock PIN. The App only receives a boolean pass/fail result from the Android operating  
-  system and never accesses, reads, or stores your biometric data.                       
-  • Alarms & Notifications (SCHEDULE_EXACT_ALARM, POST_NOTIFICATIONS,                    
-  RECEIVE_BOOT_COMPLETED):                                                               
-  Used strictly locally to ring your scheduled daily reminders and note alarms at the    
-  exact times and weekdays you configure, and to restore active alarms after your device 
-  reboots.                                                                               
-  ──────                                                                                 
-  ## 3. Optional Backup & Cloud Restore Features                                         
-                                                                                         
-  To prevent data loss when switching devices, Med Folio supports the following user-    
-  controlled backup options:                                                             
-                                                                                         
-  • Android System Auto Backup:                                                          
-  If enabled in your device settings, the Android operating system automatically backs up
-  lightweight app preferences and local database records (excluding heavy media files) to
-  your personal Google account.                                                          
-  • Optional 1-Tap Google Drive Cloud Backup (drive.appdata):                            
-  If you voluntarily choose to use the "Back Up to Google Drive / Restore from Google    
-  Drive" feature, the App requests Google Sign-In authentication (accessing your basic   
-  account email/ID for session authentication) and the restricted https://www.googleapis.com/auth/drive.appdata scope.                                                          
-  • How Google Drive Data is Handled:                                                    
-  This scope only allows Med Folio to read and write your encrypted backup archive inside
-  a hidden, private appDataFolder located within your own personal Google Drive account. 
-  Med Folio cannot view, access, or modify any of your personal Google Drive files or    
-  folders, and your backup data never passes through any developer-owned server.         
-  • Manual Local Backup (.zip Export/Import):                                            
-  You may optionally export or import a .zip archive of your notes, audio recordings, and
-  images using Android’s native Storage Access Framework (SAF) file picker without       
-  granting broad storage permissions.                                                    
-  ──────                                                                                 
-  ## 4. Third-Party Services (Payments, Ads & Maps)                                      
-                                                                                         
-  Med Folio integrates trusted third-party services that may collect limited device      
-  identifiers or process search queries governed by their own privacy policies:          
-                                                                                         
-  • Google Play In-App Billing:                                                          
-  Subscription plans (Monthly, Yearly) and Lifetime PRO unlocks are processed securely by
-  Google Play Billing. We do not see, collect, or store your credit card, debit card, or 
-  mobile wallet numbers.                                                                 
-  Policy: https://policies.google.com/privacy                                            
-  • Google AdMob (Free Tier Users Only):                                                 
-  For users on the free version, we use Google AdMob to display advertisements. AdMob may
-  automatically collect your device’s Advertising ID, coarse IP address, and diagnostics 
-  data to serve ads and prevent fraud. Upgrading to Med Folio PRO disables all           
-  advertisements.                                                                        
-  Policy: https://policies.google.com/privacy                                            
-  • Google Play Services & On-Device ML Kit:                                             
-  Used for on-device optical text recognition (ML Kit OCR) to scan drug package names and
-  barcodes locally, as well as optional Google Sign-In authentication for Google Drive   
-  cloud backup.                                                                          
-  Policy: https://policies.google.com/privacy                                            
-  • OpenStreetMap (OSM) & Nominatim:                                                     
-  Used by the Nearby Clinics & Pharmacies locator to display interactive map tiles (via  
-  osmdroid) and search nearby healthcare facilities (via OpenStreetMap Nominatim and     
-  Overpass API). Real-time location coordinates are queried directly against public OSM  
-  endpoints to return nearby results and are never tracked, logged, or saved.            
-  Policy: https://wiki.osmfoundation.org/wiki/Privacy_Policy                             
-  ──────                                                                                 
-  ## 5. Data Retention & How to Delete Your Data                                         
-                                                                                         
-  Because you are in full control of your data, you can delete your information at any   
-  time:                                                                                  
-                                                                                         
-  • Deleting Local Notes, Audio, Images & Reminders:                                     
-  You can delete individual notes, voice recordings, images, bookmarks, or alarms        
-  directly within the App at any time, or clear all local data via:                      
-  Android Settings → Apps → Med Folio → Storage → Clear Storage (or by uninstalling the  
-  App).                                                                                  
-  • In-App Cloud Deletion:                                                               
-  Open Med Folio → Settings / Account and tap "Delete Cloud Backup & Disconnect Google   
-  Drive." This permanently deletes your backup file from your Google Drive appDataFolder 
-  and revokes your Google Sign-In session.                                               
-  • Via Your Google Account (Without the App):                                           
-  You can delete Med Folio’s hidden Drive data and revoke access anytime at:             
-      • https://myaccount.google.com/permissions                                         
-      • Or inside https://drive.google.com → Settings → Manage Apps → Med Folio → Options
-      → Delete hidden app data.                                                          
-  • Via Email Request:                                                                   
-  If you need assistance disconnecting or deleting data, contact us directly at:         
-  effitron.official@outlook.com                                                          
-  ──────                                                                                 
-  ## 6. Educational & Medical Disclaimer                                                 
-                                                                                         
-  Med Folio is strictly an educational reference and study utility. It does not collect  
-  clinical Electronic Health Records (EHR), does not function as a medical device, and   
-  does not provide medical advice, diagnosis, or treatment recommendations. Users are    
-  advised not to store identifiable third-party patient health records inside the        
-  personal study notebook.                                                               
-  ──────                                                                                 
-  ## 7. Children's Privacy                                                               
-                                                                                         
-  Med Folio is intended for general audiences, students, and adult learners. We do not   
-  knowingly collect personal information from children under the age of 13.              
-  ──────                                                                                 
-  ## 8. Changes to This Privacy Policy                                                   
-                                                                                         
-  We may update this Privacy Policy from time to time to reflect app updates or          
-  regulatory requirements. Any changes will be posted on this page with an updated "Last 
-  Updated" date.                                                                         
-  ──────                                                                                 
-  ## 9. Contact Us                                                                       
-                                                                                         
-  If you have any questions or concerns regarding this Privacy Policy or your data       
-  privacy, please contact us at:                                                         
-                                                                                         
-  • Developer: Effitron                                                                  
-  • Support Email: effitron.official@outlook.com                                         
-  • GitHub Repository: https://github.com/RissamAsghar/Privacy-Policy                    
-                                                                       
+# Privacy Policy for Med Folio
+
+**Effective Date:** October 14, 2026
+**Last Updated:** November 2, 2026
+**Developer:** Effitron
+**Contact Email:** effitron.official@outlook.com
+
+---
+
+## Overview
+
+Effitron operates the Med Folio mobile application (the "App"). This Privacy Policy explains what
+information the App handles, where it is stored, who it is shared with, and how you can delete it.
+It covers the medicine directory, package scanner, medication reminders and dose log, health
+calculators, Nearby pharmacies and clinics, Pomodoro timer, and study notebooks and flashcards.
+
+Med Folio is built offline-first. **We (Effitron) do not run our own servers that collect your
+personal or health information, we do not have user accounts, and we never sell your data.** What
+you enter stays on your phone unless you choose to back it up to your own Google Drive.
+
+---
+
+## 1. Information Stored on Your Device
+
+Everything below is stored only in the App's private storage on your phone. The App's personal
+database is encrypted (SQLCipher), and sensitive values are protected with a key held in the
+Android Keystore.
+
+- **Your medications, reminders and dose history:** the medicines you add, their schedules, stock
+  and refill counts, and the doses you mark as taken, skipped or snoozed.
+- **Your profile (optional):** your name, blood group, allergies and a profile photo, if you choose
+  to enter them.
+- **Body measurements (optional):** sex, age, height, weight, waist and activity level that you
+  enter in the calculators, saved so you don't have to type them again. They are used on your
+  device to calculate BMI, BMR, daily calories, ideal body weight, hydration and heart-rate zones.
+- **Notebooks and flashcards:** notes, checklists, flashcard decks, voice recordings and images
+  (chosen with the Android Photo Picker or taken with the camera).
+- **Saved items and settings:** bookmarked medicines and formulas, recent searches, Pomodoro
+  sessions, the medicine databases you downloaded, and your app preferences.
+
+We have no access to any of this information.
+
+---
+
+## 2. Device Permissions and How We Use Them
+
+Med Folio asks for each permission only when you use the feature that needs it.
+
+- **Camera:** only when you open the Medicine Scanner or take a photo for a note. Text and barcode
+  recognition run entirely on your device (Google ML Kit, on-device). Camera frames are not saved
+  or uploaded.
+- **Microphone:** only when you tap the microphone for Voice Search or record a Voice Note. Voice
+  Notes are saved in the App's private storage. Voice Search uses your phone's speech recognition
+  service (usually Google), which converts your speech to text under that provider's privacy
+  policy. The App never records in the background.
+- **Location (precise or approximate):** only when you open **Nearby** to find pharmacies and
+  clinics. While you use the App, a search you started may finish even if you switch to another
+  tab. Location is never used when the App is closed or in the background, is not stored, and is
+  not sold. The App does not request background location.
+- **Biometrics / screen lock:** used through Android's BiometricPrompt to lock private notes. The
+  App only receives a pass or fail result. It never sees or stores your fingerprint or face data.
+- **Notifications, exact alarms and start at boot:** used on your device to ring your medication
+  and note reminders at the times you set, and to restore them after your phone restarts.
+- **Internet and network state:** used to download medicine databases, show ads to free users,
+  process purchases, run Nearby searches and make the optional Google Drive backup.
+
+---
+
+## 3. Backups
+
+- **Android Auto Backup is turned off.** The App does not use Android's automatic backup to your
+  Google account.
+- **Optional Google Drive backup:** if you choose "Back up to Google Drive", the App asks you to
+  sign in with Google and requests only the `drive.appdata` permission. Your backup (profile,
+  medications, reminders, dose history, notebooks with their images and recordings) is saved as a
+  file in a hidden, app-only folder in **your own** Google Drive.
+  - Med Folio cannot see or change any of your other Drive files.
+  - The backup goes directly from your phone to Google. It never passes through our servers.
+  - The backup file is protected by your Google account and Google's encryption in transit and at
+    rest. The App does not add its own extra encryption to it.
+- **Export to a file:** you can save a full copy of your data as a file you choose ("Export all my
+  data"). That file is yours to keep or delete.
+
+---
+
+## 4. Third-Party Services
+
+These services have their own privacy policies:
+
+- **Google Play Billing:** processes Pro subscriptions (Monthly, Yearly) and the Lifetime purchase.
+  We never see or store your card or wallet details.
+  Policy: https://policies.google.com/privacy
+- **Google AdMob and the User Messaging Platform (free version only):** shows ads to free users.
+  AdMob may collect your device's advertising ID, IP address and diagnostic data to show ads and
+  prevent fraud. Where the law requires it, you are asked for consent first, and you can change
+  your choice at any time in **Privacy & Security → Your data → Privacy choices for ads**. Med
+  Folio Pro removes all ads. Ads are not shown on medication screens.
+  Policy: https://policies.google.com/privacy
+- **Google ML Kit (on-device):** reads medicine names and barcodes on your phone for the scanner.
+  Policy: https://policies.google.com/privacy
+- **Google Sign-In:** used only for the optional Google Drive backup.
+  Policy: https://policies.google.com/privacy
+- **Cloudflare (R2):** stores the medicine databases you download, such as Pakistan, Canada and
+  USA. To download a file, your phone connects to Cloudflare, which sees your IP address like any
+  website would. No personal or health information is sent.
+  Policy: https://www.cloudflare.com/privacypolicy/
+- **OpenStreetMap (map tiles, Nominatim and Overpass):** used by Nearby to show the map and find
+  nearby pharmacies and clinics. The search area around your location is sent directly to these
+  public services to get results. We do not log or keep it.
+  Policy: https://wiki.osmfoundation.org/wiki/Privacy_Policy
+
+---
+
+## 5. Data Retention and How to Delete Your Data
+
+Your data stays on your phone until you delete it. You can delete it at any time, in any of the
+following ways. **Med Folio has no user accounts, so there is no account to close.** Deleting your
+data in the App removes everything we could ever hold about you.
+
+### A. Delete everything from inside the App (recommended)
+
+1. Open **Med Folio**.
+2. Tap the **⋮ menu** (top right of the Home screen) → **Privacy & Security**.
+3. Under **Your data**, tap **Delete all my data**.
+4. To remove your cloud copy too, tick **Also delete my Google Drive backup**. This also signs the
+   App out of Google.
+5. Tap **Delete everything**.
+
+This permanently removes from your phone:
+- reminders and dose history;
+- medications;
+- profile and photo;
+- body measurements;
+- saved medicines;
+- notebooks and flashcards, with their images and recordings;
+- all settings.
+
+All alarms and notifications are cancelled, and the App restarts as if newly installed. This
+cannot be undone, so tap **Export a copy first** if you want to keep a copy.
+
+### B. Delete individual items
+
+You can delete any single medication, reminder, note, recording, image, flashcard, deck or
+bookmark from its own screen in the App.
+
+### C. Delete with Android settings or by uninstalling
+
+Go to **Android Settings → Apps → Med Folio → Storage → Clear storage**, or uninstall the App.
+Either way, all data on your phone is erased. Your Google Drive backup, if you made one, is kept
+until you delete it with option A or D.
+
+### D. Delete your Google Drive backup without the App
+
+- Open **https://drive.google.com** → **Settings** (⚙) → **Manage apps** → **Med Folio** →
+  **Options** → **Delete hidden app data**.
+- To remove the App's access to your Google account, go to
+  **https://myaccount.google.com/permissions**, choose **Med Folio** and remove access.
+
+### E. Ad and purchase data
+
+- Reset or delete your advertising ID in **Android Settings → Google → Ads** (or **Privacy → Ads**).
+- Purchase records are kept by Google Play under Google's policy. You can see them in the Play
+  Store under **Payments & subscriptions**.
+
+### F. Ask us
+
+If you need help, email **effitron.official@outlook.com** with the subject "Data deletion". We hold
+no personal data on our side, so we will guide you through the steps above. We reply within 30
+days.
+
+---
+
+## 6. Educational and Medical Disclaimer
+
+Med Folio is an educational reference and study tool. It is not a medical device and does not
+give medical advice, diagnosis or treatment. Always follow your doctor's or pharmacist's
+instructions. Please do not store other people's identifiable patient records in your notebooks.
+
+---
+
+## 7. Children's Privacy
+
+Med Folio is meant for a general audience, students and adults. It is not directed at children
+under 13, and we do not knowingly collect personal information from children.
+
+---
+
+## 8. Changes to This Privacy Policy
+
+We may update this Privacy Policy when the App changes or when the law requires it. Changes are
+posted on this page with a new "Last Updated" date.
+
+---
+
+## 9. Contact Us
+
+- **Developer:** Effitron
+- **Email:** effitron.official@outlook.com
+- **Privacy Policy page:** https://github.com/RissamAsghar/Privacy-Policy
